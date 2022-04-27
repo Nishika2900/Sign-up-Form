@@ -1,0 +1,223 @@
+<html>
+
+<head>
+    <style>
+        form{
+            text-align-last: justify ;
+        }
+        /* #form_box{
+
+                background-color:#12a2a7 ;
+        } */
+        #form_inner_box{
+            color: teal;
+            width:auto;
+            /* border: 25px solid darkturquoise; */
+            align-items: left;
+            padding:0px;
+            margin:auto;
+        }
+        .textfield{
+            
+            align-items: center;
+            justify-content: center;
+            padding:auto;
+            align-content: right;
+            text-align-last: center;
+            font-variant-caps: all-small-caps;
+            font-family: sans-serif;
+            color: black;
+            border: solid 5px white;
+            height: auto;
+            width:auto;
+        }
+        #head{
+            text-decoration: overline teal 5px;
+            color: rgba(73,106,87,1.00);
+            font-size:x-large;
+            font-family: sans-serif;
+        }
+        #subhead{
+            font-size: large;
+            font-family: arial;
+        }
+        #option{
+            /*color: rgb( 147, 124, 135);*/
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        /* style the container */
+        .container {
+          position: relative;
+          border-radius: 5px;
+          /* background-color: #f2f2f2; */
+          padding: 20px 0 30px 0;
+        } 
+
+        /* style inputs and link buttons */
+        input .btn {
+          width: 100%;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          margin: 5px 0;
+          opacity: 0.85;
+          display: inline-block;
+          font-size: 17px;
+          line-height: 20px;
+          text-decoration: none; /* remove underline from anchors */
+        }
+
+        input:hover,
+        .btn:hover {
+          opacity: 1;
+        }
+        .shape {
+        /* background: linear-gradient(to top right, maroon 50%, red 50%); */
+        background:radial-gradient(circle closest-side, rgba(227, 224, 207, 255) 50%, rgb(196, 211, 203) 50%);
+        /* transform: skewX(-45deg); */
+        z-index: 0;
+        content: '';
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        }
+        .col {
+          float: left;
+          width: 50%;
+          margin: auto;
+          padding: 0 50px;
+          margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* vertical line */
+        .vl {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          border: 2px solid #ddd;
+          height: 175px;
+        }
+
+        /* text inside the vertical line */
+        .vl-innertext {
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #f1f1f1;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          padding: 8px 10px;
+        }
+
+        /* hide some text on medium and large screens */
+        .hide-md-lg {
+          display: none;
+        }
+
+        /* bottom container */
+        .bottom-container {
+          text-align: center;
+          background-color: teal;
+          /* border: solid floralwhite 5px; */
+        }
+
+        /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+        /*@media screen and (max-width: 650px) {
+          .col {
+            width: 100%;
+            margin-top: 0;
+          }
+          /* hide the vertical line 
+          .vl {
+            display: none;
+          }
+          /* show the hidden text on small screens 
+          .hide-md-lg {
+            display: block;
+            text-align: center;
+          }
+        }*/
+        #submit{
+            
+            font-variant-caps: all-petite-caps;
+            font-size: x-large;
+            font-family: sans-serif bold;
+            color: teal;
+            
+        }
+        .button{
+            float: center !important;
+            /* border: solid floralwhite 5px; */
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="shape" >
+    <!--<div id="form_inner_box">-->
+    <form class="textfield" id="form_inner_box" action="" method="post"><br>        
+
+        <div class="container">
+          
+            <div class="row">
+              <h2 style="text-align:center; font-size: xxx-large;">Sign Up</h2>
+              <div class="vl">
+                <span class="vl-innertext"></span>
+              </div>
+
+              <div class="col">
+                
+
+                <label id="head"><b>PERSONAL INFORMATION</label></b><br><br>
+                <label for="fname"  id="subhead">First name</label>
+                <input type="text" placeholder="Enter First Name" class="textfield" id="fname" name="fname" required><br><br>
+                <label for="lname" id="subhead">Last name</label>
+                <input type="text" placeholder="Enter Last Name"class="textfield" id="lname" name="lname" required><br>
+                <br>
+                <label for="age" id="subhead">Age</label>
+                <input type="number" placeholder="Enter Age" class="textfield" id="age" name="age"><br><br>
+              </div>
+
+              <div class="col">
+                
+                  <label id="head" for="medical_information"><b>CONTACT INFORMATION</b><br><br></label>
+                </div>
+                <label for="email" id="subhead">Email</label>
+                <input type="email" name="email" placeholder="Enter Mail Id" class="textfield" ><br><br>
+                <label for="Contact_no" id="subhead">Contact No.</label>
+                <input type="number" placeholder="Enter Contact No." class="textfield" id="Contact_no" name="Contact_no" ><br><br>
+                
+                <label for="password" id="subhead">Password</label>
+                <input type="password" placeholder="Enter Password" class="textfield">
+              </div>
+      
+            </div>
+          
+        </div>
+
+        <div class="bottom-container">
+          <!-- <div class="row">
+            <div class="col"> -->
+              <button type="submit" id="submit" class="button" name="submit"> Submit</button>
+            <!-- </div>
+          </div> -->
+        </div>
+
+    </form>
+    <!--</div>-->
+</div>
+</body>
+</html>
